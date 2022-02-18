@@ -1,13 +1,11 @@
 package br.com.ayrton.first_selenium_app.app;
 
-import br.com.ayrton.first_selenium_app.browser.Windows;
+import br.com.ayrton.first_selenium_app.elements.Finders;
 
 public class App {
     
     public static void main(String[] args) throws Exception {
-    	Windows w = new Windows();
-    	w.executeScript();
-    	w.printPage();
+    	new Finders().getActiveElement();
     }
     
 }

@@ -17,6 +17,24 @@ public class Locators {
 	private final String RESOURCES_PATH = Paths.get(Resources.PATH, "elements").toString(); 
 	private final String LOCATOR_EXAMPLE_HTML = Paths.get(this.RESOURCES_PATH, "locators-example.html").toString();
 	
+	public void tradicionalLocators() {
+		WebDriver driver = new ChromeDriver();
+		try {
+			
+			driver.findElement(By.className("cssclass")); //compound class are not permitted
+			driver.findElement(By.cssSelector("#modal>iframe")); //CSS Selector
+			driver.findElement(By.id("id")); //ID attribute
+			driver.findElement(By.name("name")); //NAME attribute
+			driver.findElement(By.linkText("value of tag <a>"));
+			driver.findElement(By.partialLinkText("value of tag <a>")); //locates anchor elements whose visible text contains the search value. If multiple elements are matching, only the first one will be selected.
+			driver.findElement(By.tagName("tag")); //example: the "input" tag
+			driver.findElement(By.xpath("XPath")); //select nodes or node-sets in an XML document. The node is selected by following a path or steps.
+			
+		} finally {
+			driver.quit();
+		}
+	}
+	
 	/* Relative Locators */
 	/* Acima */
 	public void above() throws InterruptedException {

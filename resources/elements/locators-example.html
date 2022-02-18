@@ -1,0 +1,33 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locators example</title>
+</head>
+<body>
+    <form action="" onsubmit="event.preventDefault();">
+        <label for="email" id="lbl-email">Email:</label><br>
+        <input type="text" id="email" />
+        <br><br>
+        <label for="password" id="lbl-password">Password:</label><br>
+        <input type="password" id="password" />
+        <br><br>
+        <button id="cancel" value="Cancel" onclick="clearForm();">Cancel</button>
+        <button id="submit" value="Submit" onclick="submitForm();">Submit</button>
+    </form>
+</body>
+<script>
+    function blockForm(event){
+        event.preventDefault();
+    }
+    function clearForm(){
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+    }
+    function submitForm(){
+        alert("dados recebidos");
+        clearForm();
+    }
+</script>
+</html>

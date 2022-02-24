@@ -100,7 +100,7 @@ public class Interactions {
 			WebElement searchInput = driver.findElement(By.name("q"));
 			searchInput.sendKeys("selenium");
 			
-			//Clears the entered text
+			//Submit the entered text
 			searchInput.submit();
 		} finally {
 			driver.quit();
